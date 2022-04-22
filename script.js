@@ -3,7 +3,12 @@ var numero = parseInt(prompt("Ingrese el numero hasta el cual quiere mostrar"))
 
 for(let i = 0; i <= numero; i++){
         document.write("Vamos por el: " + i + "<br>");
+       
 }
+
+
+
+let datos = [];
 
 let continuar = true
 let sujeto1;
@@ -30,6 +35,8 @@ if(resultado === true){
             alert(sujeto2 + " es mayor que "+ sujeto1)
             continuar = false;
         }
+        datos.push(sujeto1, sujeto2, edad1, edad2)
+        console.log(datos)
     }
 
 }else
