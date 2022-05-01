@@ -1,14 +1,23 @@
 
-var numero = parseInt(prompt("Ingrese el numero hasta el cual quiere mostrar"))
+alert("Bienvenidos a la tabla de multiplicación")
 
-for(let i = 0; i <= numero; i++){
-        document.write("Vamos por el: " + i + "<br>");
-       
+var tabla = parseInt(prompt("Ingrese el número del que quiera conocer su tabla de multiplicación"))
+var finTabla = parseInt(prompt("Ingrese el número que en terminara la tabla"))
+
+for(let i = 1; i <= finTabla; i++){
+        document.write(tabla + " x " + i + " = " + (tabla*i) + "<br>");
 }
 
 
 
-let datos = [];
+
+
+
+
+
+
+
+let datosIngresados = [];
 
 let continuar = true
 let sujeto1;
@@ -35,10 +44,42 @@ if(resultado === true){
             alert(sujeto2 + " es mayor que "+ sujeto1)
             continuar = false;
         }
-        datos.push(sujeto1, sujeto2, edad1, edad2)
-        console.log(datos)
+        datosIngresados.push(sujeto1, sujeto2, edad1, edad2)
+        
     }
 
 }else
     alert("Gracias por participar")
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+class Participantes {
+    constructor(nombre, apellido, edad, estadoCivil){
+        this.nombre = nombre
+        this.apellido = apellido
+        this.edad = edad
+        this.estadoCivil = estadoCivil
+    }
+}
+
+const participante1 = new Participantes("Josias", "Avram", 31, "casado")
+const participante2 = new Participantes("Aylen", "Urrutia", 27, "Soltera")
+
+
+var concursantes = [participante1, participante2]
+
+concursantes.forEach((concursantesEnArray, index) => {
+    console.log(concursantesEnArray)
+    console.log(index)
+})
